@@ -1,4 +1,4 @@
-package cl.duoc.ms_sales_db.Model.Entities;
+package cl.duoc.ms_auth_db.Model.Entities;
 
 @Entity
 @Table(name="login_attempt")
@@ -11,12 +11,19 @@ public class Login_attempt {
     @Generatedvalue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private long id; 
+
     @Column(name="user_id")
     private long user_id;
+
     @Column(name="succes")
     private boolean succes;
+
     @Column(name="ip_address")
     private String ip_address;
+
+    @ManyToOne
+    @JoinColumn(name= "user_id")
+    private User user;
 
 
 }
