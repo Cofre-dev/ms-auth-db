@@ -8,6 +8,7 @@ class MsSalesDbApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
 	}
 
 }
